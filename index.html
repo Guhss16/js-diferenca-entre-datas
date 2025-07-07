@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferença entre Dadas</title>
+</head>
+<body>
+    <input type="date" id="date1">
+    <input type="date" id="date2">
+    <button onclick="resultado()">Calcular Diferença</button>
+    <p id="mensagem"></p>
+
+</body>
+    <script>
+    function resultado() {
+        const date1Input = document.getElementById("date1").value;
+        const date2Input = document.getElementById("date2").value;
+        const mensagem = document.getElementById("mensagem");
+
+        if (date1Input === "" || date2Input === "") {
+            mensagem.textContent = "Preencha os campos de datas.";
+            return;
+        }
+        
+        
+
+        const date1 = new Date(date1Input);
+        const date2 = new Date(date2Input);
+
+        const diferenca = Math.abs((date1 - date2) / (1000 * 60 * 60 * 24));
+
+        mensagem.textContent = "A diferença entre as datas é de " + diferenca + " dias.";
+    }
+    </script>
+</html>
