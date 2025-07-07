@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diferença entre Dadas</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Diferença entre Datas</title>
 </head>
 <body>
-    <input type="date" id="date1">
-    <input type="date" id="date2">
-    <button onclick="resultado()">Calcular Diferença</button>
-    <p id="mensagem"></p>
-
+    <div class="contentContainer">
+        <h1>Diferença entre Datas</h1>
+        <h2>Insira duas datas para calcular a diferença em dias.</h2>
+        <input type="date" id="date1">
+        <input type="date" id="date2">
+        <button onclick="resultado()">Calcular</button>
+        <p id="mensagem"></p>
+    </div>
 </body>
     <script>
     function resultado() {
